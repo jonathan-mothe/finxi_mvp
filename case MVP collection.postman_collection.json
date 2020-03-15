@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "6a2692de-da1b-4495-ae07-b5001e72f2c4",
+		"name": "case MVP collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://0.0.0.0:8000/demandas/",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/demandas/",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/demandas/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d92111e7-671e-4ea1-9c00-1c0ca75fadcf",
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "IMgL0p7TVmjhGWHxQBD21uM00eb8LPcNRVkRNxPaeKf4NHFN4fAi5FhAaTVqBrFj",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "descricao",
+							"value": "Terceiro teste descrição (leia)",
+							"type": "text"
+						},
+						{
+							"key": "cep",
+							"value": "21832180",
+							"type": "text"
+						},
+						{
+							"key": "numero",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "logradouro",
+							"value": "Rua do Ouvidor",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "Centro",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "organa.leia@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "(21) 3422-5748",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/demandas/14/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "IMgL0p7TVmjhGWHxQBD21uM00eb8LPcNRVkRNxPaeKf4NHFN4fAi5FhAaTVqBrFj",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "descricao",
+							"value": "Sexto teste descrição (leia)",
+							"type": "text"
+						},
+						{
+							"key": "cep",
+							"value": "21834150",
+							"type": "text"
+						},
+						{
+							"key": "numero",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "logradouro",
+							"value": "Rua do Ouvidor",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "Centro",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "organa.leia@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "(21) 3422-5748",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/5/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/demandas/1/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "Value contains invalid newline characters.",
+						"key": "X-CSRFToken",
+						"value": "IMgL0p7TVmjhGWHxQBD21uM00eb8LPcNRVkRNxPaeKf4NHFN4fAi5FhAaTVqBrFj",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "descricao",
+							"value": "Primeiro teste demanda (Leia)",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "True",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/1/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:8000/demandas/3/",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "IMgL0p7TVmjhGWHxQBD21uM00eb8LPcNRVkRNxPaeKf4NHFN4fAi5FhAaTVqBrFj",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "descricao",
+							"value": "EDITADO - Segundo teste demanda (Leia)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/demandas/3/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"demandas",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
