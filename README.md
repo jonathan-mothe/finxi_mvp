@@ -9,6 +9,7 @@ docker-compose up
 docker-compose run web ./manage.py createsuperuser
 
 Username: admin
+
 Email address: admin@mvp.com
 
 
